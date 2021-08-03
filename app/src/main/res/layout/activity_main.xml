@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/celsiusButton"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="124dp"
+        android:onClick="convertCelsius"
+        android:text="Convert Celsius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/metreButton" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="124dp"
+        android:onClick="convertKilogram"
+        android:text="Convert Kilo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/metreButton"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="124dp"
+        android:onClick="convertMetre"
+        android:text="Convert Metre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="71dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitInput" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer1" />
+
+    <TextView
+        android:id="@+id/answer3"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer2" />
+
+    <TextView
+        android:id="@+id/answer2unit"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answer2"
+        app:layout_constraintTop_toBottomOf="@+id/answer1unit" />
+
+    <TextView
+        android:id="@+id/answer3unit"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answer3"
+        app:layout_constraintTop_toBottomOf="@+id/answer2unit" />
+
+    <Spinner
+        android:id="@+id/selectUnit"
+        android:layout_width="135dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:entries="@array/selectUnitOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/unitInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectUnit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/answer1unit"
+        android:layout_width="123dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answer1"
+        app:layout_constraintTop_toBottomOf="@+id/unitInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
